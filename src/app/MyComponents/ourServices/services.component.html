@@ -1,0 +1,10 @@
+<div class="services-container">
+  <h1 class="heading">Our Services</h1>
+  <div class="services-grid">
+    <div class="card" *ngFor="let service of services">
+      <img [src]="service.image" alt="{{ service.title }}" class="card-image" />
+      <h2 class="card-title">{{ service.title }}</h2>
+      <p class="card-description">{{ service.description }}</p>
+    </div>
+  </div>
+</div>

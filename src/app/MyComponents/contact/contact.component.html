@@ -1,0 +1,25 @@
+<section id="contact" class="contact">
+  <div class="contact-container ms-5 ">
+    <div class="contact-form ">
+      <h2>Contact Me</h2>
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <input type="text" name="name" ngModel placeholder="Your Name" required>
+        <input type="email" name="email" ngModel placeholder="Your Email" required>
+        <textarea name="message" ngModel placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <div class="social-icons">
+        <a href="https://github.com/your-profile" target="_blank">
+          <fa-icon [icon]="['fab', 'github']"></fa-icon>
+        </a>
+        <a href="https://linkedin.com/in/your-profile" target="_blank">
+          <fa-icon [icon]="['fab', 'linkedin']"></fa-icon>
+        </a>
+        
+      </div>
+    </div>
+    <div class="contact-image">
+      <img src="https://images.pexels.com/photos/3182759/pexels-photo-3182759.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Contact Image">
+    </div>
+  </div>
+</section>

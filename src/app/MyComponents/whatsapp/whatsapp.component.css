@@ -1,0 +1,102 @@
+/* Container for positioning */
+.whatsapp-icon-container {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .whatsapp-icon-container:hover {
+    transform: scale(1.2) rotate(-5deg);
+  }
+  
+  /* WhatsApp Icon */
+  .whatsapp-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(145deg, #25d366, #20b857);
+    border-radius: 50%;
+    box-shadow: 
+      0 10px 20px rgba(0, 0, 0, 0.3), 
+      inset 0 -3px 5px rgba(0, 0, 0, 0.2), 
+      0 0 20px rgba(37, 211, 102, 0.5);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Shine Effect */
+  .shine {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    animation: shineAnimation 2s infinite linear;
+  }
+  
+  @keyframes shineAnimation {
+    0% {
+      transform: rotate(45deg) translateX(-100%);
+    }
+    100% {
+      transform: rotate(45deg) translateX(100%);
+  }
+}
+  
+  /* WhatsApp Logo */
+  .whatsapp-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg")
+      no-repeat center;
+    background-size: contain;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .whatsapp-icon {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .whatsapp-logo {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .whatsapp-icon-container {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .whatsapp-icon {
+      width: 40px;
+      height: 40px;
+      box-shadow: 
+        0 8px 15px rgba(0, 0, 0, 0.3), 
+        inset 0 -2px 4px rgba(0, 0, 0, 0.2), 
+        0 0 15px rgba(37, 211, 102, 0.4);
+    }
+  
+    .whatsapp-logo {
+      width: 25px;
+      height: 25px;
+    }
+  
+    .whatsapp-icon-container {
+      bottom: 15px;
+      right: 15px;
+    }
+  }
+  

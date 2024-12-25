@@ -1,0 +1,123 @@
+/* Footer */
+.footer {
+    background-color: black; /* Dark background */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative; /* Enable positioning for decorations */
+    overflow: hidden; /* Prevent overflow of decorations */
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 2px solid white; /* Bright accent line */
+  }
+  
+  .footer-logo h2 {
+    font-size: 32px; /* Larger logo */
+    color: white; /* Accent color for logo */
+    margin-bottom: 5px; /* Reduced space for tagline */
+    text-transform: uppercase; /* Make it stand out */
+    letter-spacing: 1px; /* Add space between letters */
+  }
+  
+  .footer-logo p {
+    font-size: 16px; /* Tagline size */
+    color: #ccc; /* Lighter color for contrast */
+    margin: 0; /* No margin for consistency */
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 25px; /* Increased spacing between icons */
+  }
+  
+  .footer-social i {
+    color: white;
+    font-size: 28px; /* Larger icon size */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  }
+  
+  .footer-social i:hover {
+    color: rgb(157, 216, 236); /* Change color on hover */
+    transform: scale(1.1); /* Scale effect on hover */
+  }
+  
+  .footer-bottom {
+    padding-top: 20px;
+  }
+  
+  .footer-bottom p {
+    margin: 5px 0; /* Reduced margin for better spacing */
+    font-size: 14px; /* Smaller font size for copyright */
+    color: white; /* Accent color for copyright */
+  }
+  
+  .footer-email {
+    font-size: 16px; /* Slightly larger size for email */
+  }
+  
+  .footer-email a {
+    color: white; /* Accent color for email link */
+    text-decoration: none; /* No underline */
+  }
+  
+  .footer-email a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Decorative Lines */
+  .footer::before,
+  .footer::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: #f39c12; /* Decorative line color */
+    width: 60%; /* Width of decorative lines */
+    left: 50%;
+    transform: translateX(-50%); /* Center the lines */
+    opacity: 0.5; /* Light opacity for decoration */
+  }
+  
+  .footer::before {
+    top: 0; /* Top line */
+    z-index: 1; /* Above the content */
+  }
+  
+  .footer::after {
+    bottom: 0; /* Bottom line */
+    z-index: 1; /* Above the content */
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center; /* Center text on small screens */
+    }
+  
+    .footer-logo h2 {
+      font-size: 26px; /* Smaller logo size */
+    }
+  
+    .footer-logo p {
+      font-size: 14px; /* Smaller tagline size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-logo h2 {
+      font-size: 20px; /* Even smaller for very small screens */
+    }
+  
+    .footer-email {
+      font-size: 14px; /* Smaller email size */
+    }
+  }
+  
