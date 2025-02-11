@@ -1,17 +1,17 @@
 <header [ngClass]="{'scrolled': scrolled}">
-    <div><img class="logo" src="./assets/images/logo.jpg" alt=""></div>
-    <nav>
+    <div class="logo-container"><img width="120px" class="logo" src="/assets/images/logo.jpg" alt="Website Logo"></div>
+    <nav [ngClass]="{'menu-open': isMenuOpen}">
         <div class="hamburger" (click)="toggleMenu()">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <ul [ngClass]="{'active': isMenuOpen}">
-            <li><a fragment="#home" routerLink="#home">Home</a></li>
-            <li><a fragment="#about"routerLink="#about">About</a></li>
-            <li><a routerLink="#Services">Services</a></li>
-            <li><a routerLink="#projects">Projects</a></li>
-            <li><a routerLink="#contact">Contact</a></li>
+        <ul [ngClass]="{'active': isMenuOpen}" class="sss">
+            <li><a fragment="home">Home</a></li>
+            <li><a fragment="about">About</a></li>
+            <li><a fragment="services">Services</a></li>
+            <li><a fragment="projects">Projects</a></li>
+            <li><a fragment="contact">Contact</a></li>
         </ul>
     </nav>
 </header>
